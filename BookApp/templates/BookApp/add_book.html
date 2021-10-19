@@ -1,0 +1,17 @@
+{% extends 'BookApp/signin_base.html' %}
+{% block body %}
+<form  method="POST">
+    {% csrf_token %}
+    <input type="text" placeholder="Name" name="name" id="name "><br><br>
+    <input type="text" name="book_class" id="book_class" placeholder="Class"><br><br>
+    <input type="text" placeholder="publisher" name="publisher" id="publisher"><br><br>
+    <input type="file" name="cover_pic" id="cover_pic" class="btn btn-outline-primary"><br><br>
+    <input type="text" placeholder="edition_year" name="edition_year" id="edition_year"><br><br>
+    <input type="text" placeholder="price" name="price" id="price"><br><br>
+    <input type="text" name="condition" id="condition" placeholder="condition"><br><br>
+    <input type="text" name="status" id="status" placeholder="status"><br><br>
+    <label for="Book inserted on"></label>
+    <input type="date"><br><br>
+    <input type="submit" name="" id="" class="btn btn-primary">
+</form>
+{% endblock %}

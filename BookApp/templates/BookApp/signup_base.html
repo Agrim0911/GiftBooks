@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'BookApp/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'BookApp/css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="{% url 'BookApp:index' %}">
+      Gift Book
+    </a>
+    <form>
+        <a href="{% url 'BookApp:register' %}" class="btn btn-primary">Sign Up</a>
+        <a href="{% url 'BookApp:login' %}" class="btn btn-primary">Login</a>
+    </form>
+
+  </nav>
+    <div>
+        {% block body %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>

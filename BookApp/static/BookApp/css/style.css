@@ -1,0 +1,30 @@
+.register{
+    margin: auto;
+    width: 50%;
+
+    padding: 10px;
+}
+body{
+    overflow-x: hidden;
+}
+.dropdown-toggle{
+    margin-right: 60px;
+}
+.pl-log{
+    margin-bottom: 3%;
+    height: 20%;
+    width: 30%;
+}
+.banner-text{
+    top: 50%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+.banner{
+    background-color: #9FC928;
+    width: 93%;
+    height: 200px;
+    margin-bottom: 3%;
+}

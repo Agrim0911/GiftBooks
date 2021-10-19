@@ -1,0 +1,31 @@
+{% extends 'BookApp/signup_base.html' %}
+{% block body %}
+<div class="container-lg pt-3">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card register " style="box-shadow:2px 2px 4px #000000;">
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token%}
+                    
+                        <input type="text" placeholder="name" name="name" id="name "><br><br>
+                        <input type="text" placeholder="phone_no" name="phone_no" id="phone_no"><br><br>
+                        <input type="text" placeholder="email" name="email" id="email"><br><br>
+                        <input type="password" placeholder="password" name="password" id="password"><br><br>
+                        <input type="text" placeholder="address" name="address" id="address"><br><br>
+                        <input type="text" placeholder="pincode" name="pincode" id="pincode"><br><br>
+                        <input type="text" placeholder="city" name="city" id="city"><br><br>
+                        <input type="text" placeholder="state" name="state" id="state"><br><br>
+                        <input type="text" placeholder="country" name="country" id="country" value="India"><br><br>
+                        <input type="submit" value="Register"><br><br>
+                        <a href="{% url 'BookApp:login' %}">Sign in now!</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

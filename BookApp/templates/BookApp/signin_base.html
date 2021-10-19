@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'BookApp/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'BookApp/css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="{% url 'BookApp:loggedin' %}">Gift Book</a>
+    <form form-inline my-2 my-lg-0>
+        <div class="dropdown my-2 my-sm-0 btn-group" >
+            <button class="btn btn-primary dropdown-toggle" style="margin-right: 40px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{details.name}}
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              
+              <a class="dropdown-item" href="{% url 'BookApp:login' %}">Switch Account</a>
+              <a class="dropdown-item" href="{% url 'BookApp:index' %}">Log out</a>
+            </div>
+          </div>
+
+        
+    </form>
+
+  </nav>
+    <div style="margin: 3%; margin-top: 3%;">
+        {% block body %}
+        {% endblock %}
+    </div>
+    <script src="{% static 'BookApp/js/Jquery.min.js' %}"></script>
+    <script src="{% static 'BookApp/js/bootstrap.min.js' %}"></script>
+    
+</body>
+</html>

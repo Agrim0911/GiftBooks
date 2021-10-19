@@ -1,0 +1,12 @@
+{% extends 'BookApp/signup_base.html' %}
+{% block body %}<br>
+{% if messages %}
+<ul>
+    {% for message in messages %}
+        <li style="list-style: none; color: darkcyan;">{{ message }}</li>
+    {% endfor %}
+</ul>
+
+    <a href="{% url 'BookApp:login' %}" class="btn btn-outline-primary" style="margin: 3%;">Click here to login</a>
+{% endif %}
+{% endblock %}
