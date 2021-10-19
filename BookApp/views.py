@@ -2,7 +2,6 @@ from django.shortcuts import render,redirect
 from .models import Register,Books
 from django.contrib import messages
 import datetime
-import pdb
 
 
 
